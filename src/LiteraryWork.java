@@ -1,7 +1,11 @@
-public class LiteraryWork extends Creativework{
-    String editorial;
-    public LiteraryWork(String aEditorial){
-
-
+public class LiteraryWork extends CreativeWork {
+    String publisher;
+    public LiteraryWork(String aTitle, String aEditorial){
+        super(aTitle);
+        this.publisher = aEditorial;
+    }
+    public LiteraryWork(String aTitle, String aCopyright, String anEditorial){
+        super(aTitle, aCopyright);
+        this.publisher = anEditorial;
     }
 }
