@@ -6,6 +6,7 @@
 
 public class Main {
     public static void main(String[] args){
+        System.out.println("##################################################################");
         System.out.println("CREATIVE WORK TEST==============================");
         CreativeWork trabajo01 = new CreativeWork("Monalisa");
         CreativeWork trabajo02 = new CreativeWork("100 años de soledad", "Libres");

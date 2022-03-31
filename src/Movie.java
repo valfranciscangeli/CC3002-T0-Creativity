@@ -36,12 +36,12 @@ public class Movie extends CreativeWork {
     // Metodo para pasar contenido de una Movie a un string que lo describa
     @Override
     public String toString() {
-        return "Movie{" +
-                "title='" + this.getTitle() + '\'' +
+        String aux = super.toString();
+        int len = aux.length();
+        return "Movie{" + aux.substring(13, len-1)+
                 ", director='" + director + '\'' +
                 ", writer='" + writer + '\'' +
                 ", cast=" + Arrays.toString(cast) +'\'' +
-                ", copyright='" + this.getCopyright() + '\'' +
                 '}';
     }
 

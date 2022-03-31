@@ -30,12 +30,11 @@ public class Comic extends LiteraryWork{
     // Metodo para pasar contenido de una Movie a un string que lo describa
     @Override
     public String toString() {
-        return "Comic{" +
-                "title='" + this.getTitle() + '\'' +
-                ", publisher='" + this.getPublisher() + '\'' +
+        String aux = super.toString();
+        int len = aux.length();
+        return "Comic{" + aux.substring(13, len-1)+
                 ", writer='" + writer + '\'' +
                 ", cartoonists=" + Arrays.toString(cartoonists) + '\'' +
-                ", copyright='" + this.getCopyright() + '\'' +
                 '}';
     }
 

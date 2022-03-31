@@ -22,10 +22,10 @@ public class LiteraryWork extends CreativeWork {
     // Metodo para pasar contenido del LW a un string que lo describa
     @Override
     public String toString() {
-        return "LiteraryWork{" +
-                "title='" + this.getTitle() + '\'' +
+        String aux = super.toString();
+        int len = aux.length();
+        return "LiteraryWork{" + aux.substring(13,len-1)+
                 ", publisher='" + publisher + '\'' +
-                ", copyright='" + this.getCopyright() + '\'' +
                 '}';
     }
 
