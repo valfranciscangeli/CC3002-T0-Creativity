@@ -35,16 +35,20 @@ public class CreativeWork {
     // Metodo equals para comparar si 2 CW's son iguales (en memoria y/o en contenido)
     @Override
     public boolean equals(Object otherCW){
+        //iguales si son exactamente el mismo dato en la memoria
         if (this == otherCW) return true;
+        // no son iguales si el otro no es de clase CreativeWork
         if (!(otherCW instanceof CreativeWork)) return false;
-        // else
+        // si nunguno tiene copyright comparamos los titulos
         if (this.copyright==null && ((CreativeWork) otherCW).copyright==null){
             return ((CreativeWork)otherCW).title.equals(this.title);
         }
+        // comparamos titulos y copyright
         if (this.copyright!=null && ((CreativeWork) otherCW).copyright!=null){
             return ((CreativeWork)otherCW).title.equals(this.title) &&
                 ((CreativeWork)otherCW).copyright.equals(this.copyright);
         }
+        // otro caso: no son iguales
         return false;
     }
 

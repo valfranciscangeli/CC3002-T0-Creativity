@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public class LiteraryWork extends CreativeWork {
     // parametros
     private String publisher;
@@ -34,7 +32,22 @@ public class LiteraryWork extends CreativeWork {
     // Metodo equals para comparar si 2 LW's son iguales (en memoria y/o en contenido)
     @Override
     public boolean equals(Object otherLW) {
-        return true;
+        //iguales si son exactamente el mismo dato en la memoria
+        if (this == otherLW) return true;
+        // no son iguales si el otro no es de clase LiteraryWork
+        if (!(otherLW instanceof LiteraryWork)) return false;
+        // si nunguno tiene copyright comparamos los titulos y editorial
+        if (this.getCopyright()==null && ((LiteraryWork) otherLW).getCopyright()==null){
+            return ((LiteraryWork) otherLW).getTitle().equals(this.getTitle()) &&
+                    ((LiteraryWork)otherLW).publisher.equals(this.publisher);
+        }
+        // comparamos titulos y copyright
+        if (this.getCopyright()!=null && ((LiteraryWork) otherLW).getCopyright()!=null){
+            return ((LiteraryWork) otherLW).getTitle().equals(this.getTitle()) &&
+                    ((LiteraryWork)otherLW).publisher.equals(this.publisher) &&
+                    ((LiteraryWork)otherLW).getCopyright().equals(this.getCopyright());
+        }
+        // otro caso: no son iguales
+        return false;
     }
-
 }

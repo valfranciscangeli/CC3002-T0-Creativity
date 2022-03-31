@@ -48,6 +48,26 @@ public class Movie extends CreativeWork {
     // Metodo equals para comparar si 2 Movies son iguales (en memoria y/o en contenido)
     @Override
     public boolean equals(Object otherMovie) {
-        return true;
+        //iguales si son exactamente el mismo dato en la memoria
+        if (this == otherMovie) return true;
+        // no son iguales si el otro no es de clase Movie
+        if (!(otherMovie instanceof Movie)) return false;
+        // si nunguno tiene copyright comparamos los titulos y editorial
+        if (this.getCopyright()==null && ((Movie) otherMovie).getCopyright()==null){
+            return ((Movie) otherMovie).getTitle().equals(this.getTitle()) &&
+                    ((Movie)otherMovie).director.equals(this.director) &&
+                    ((Movie)otherMovie).writer.equals(this.writer) &&
+                    Arrays.equals(((Movie) otherMovie).cast, this.cast);
+        }
+        // comparamos titulos y copyright
+        if (this.getCopyright()!=null && ((Movie) otherMovie).getCopyright()!=null){
+            return ((Movie) otherMovie).getTitle().equals(this.getTitle()) &&
+                    ((Movie)otherMovie).director.equals(this.director) &&
+                    ((Movie)otherMovie).writer.equals(this.writer) &&
+                    Arrays.equals(((Movie) otherMovie).cast, this.cast) &&
+                    ((Movie)otherMovie).getCopyright().equals(this.getCopyright());
+        }
+        // otro caso: no son iguales
+        return false;
     }
 }

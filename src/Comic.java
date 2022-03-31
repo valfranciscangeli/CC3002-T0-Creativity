@@ -41,7 +41,27 @@ public class Comic extends LiteraryWork{
 
     // Metodo equals para comparar si 2 Comics son iguales (en memoria y/o en contenido)
     @Override
-    public boolean equals(Object otherComic){
-        return true;
+    public boolean equals(Object otherComic) {
+        //iguales si son exactamente el mismo dato en la memoria
+        if (this == otherComic) return true;
+        // no son iguales si el otro no es de clase Comic
+        if (!(otherComic instanceof Comic)) return false;
+        // si nunguno tiene copyright comparamos los titulos y editorial
+        if (this.getCopyright()==null && ((Comic) otherComic).getCopyright()==null){
+            return ((Comic) otherComic).getTitle().equals(this.getTitle()) &&
+                    ((Comic)otherComic).getPublisher().equals(this.getPublisher()) &&
+                    ((Comic)otherComic).writer.equals(this.writer) &&
+                    Arrays.equals(((Comic) otherComic).cartoonists, this.cartoonists);
+        }
+        // comparamos titulos y copyright
+        if (this.getCopyright()!=null && ((Comic) otherComic).getCopyright()!=null){
+            return ((Comic) otherComic).getTitle().equals(this.getTitle()) &&
+                    ((Comic)otherComic).getPublisher().equals(this.getPublisher()) &&
+                    ((Comic)otherComic).writer.equals(this.writer) &&
+                    Arrays.equals(((Comic) otherComic).cartoonists, this.cartoonists) &&
+                    ((Comic)otherComic).getCopyright().equals(this.getCopyright());
+        }
+        // otro caso: no son iguales
+        return false;
     }
 }
