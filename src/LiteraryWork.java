@@ -2,16 +2,15 @@ public class LiteraryWork extends CreativeWork {
     // parametros
     private String publisher;
 
-    // Constructor sin copyright
-    public LiteraryWork(String aTitle, String anEditorial){
-        super(aTitle);
-        this.publisher = anEditorial;
-    }
-
     // Constructor con copyright
     public LiteraryWork(String aTitle, String anEditorial, String aCopyright){
         super(aTitle, aCopyright);
         this.publisher = anEditorial;
+    }
+
+    // Constructor sin copyright
+    public LiteraryWork(String aTitle, String anEditorial){
+        this(aTitle, anEditorial, null);
     }
 
     // Metodo para recuperar informacion de editorial

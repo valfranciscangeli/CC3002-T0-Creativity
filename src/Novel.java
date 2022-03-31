@@ -2,16 +2,15 @@ public class Novel extends LiteraryWork{
     // parametros
     private String author;
 
-    // constructor sin copyright
-    public Novel(String aTitle, String anEditorial, String anAuthor){
-        super(aTitle,anEditorial);
-        this.author = anAuthor;
-    }
-
     // constructor con copyright
     public Novel(String aTitle, String anEditorial, String anAuthor, String aCopyright){
         super(aTitle,anEditorial,aCopyright);
         this.author = anAuthor;
+    }
+
+    // constructor sin copyright
+    public Novel(String aTitle, String anEditorial, String anAuthor){
+       this(aTitle,anEditorial, anAuthor, null);
     }
 
     // metodos para recuperar informacion de los campos

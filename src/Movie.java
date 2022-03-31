@@ -6,20 +6,17 @@ public class Movie extends CreativeWork {
     private String writer;
     private String[] cast;
 
-    // constructor sin copyright
-    public Movie(String aTitle, String aDirector, String aWriter, String[] aCast){
-        super(aTitle);
-        this.director = aDirector;
-        this.writer = aWriter;
-        this.cast = aCast;
-    }
-
     // constructor con copyright
     public Movie(String aTitle, String aDirector, String aWriter, String[] aCast, String aCopyright){
         super(aTitle,aCopyright);
         this.director = aDirector;
         this.writer = aWriter;
         this.cast = aCast;
+    }
+
+    // constructor sin copyright
+    public Movie(String aTitle, String aDirector, String aWriter, String[] aCast){
+        this(aTitle, aDirector, aWriter, aCast, null);
     }
 
     // metodos para recuperar informacion de los campos
