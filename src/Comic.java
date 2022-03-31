@@ -5,18 +5,16 @@ public class Comic extends LiteraryWork{
     private String writer;
     private String[] cartoonists;
 
-    // constructor sin copyright
-    public Comic(String aTitle, String anEditorial, String aWriter, String[] listCartoonists){
-        super(aTitle,anEditorial);
-        this.writer = aWriter;
-        this.cartoonists = listCartoonists;
-    }
-
     // constructor con copyright
     public Comic(String aTitle, String anEditorial, String aWriter, String[] listCartoonists, String aCopyright){
         super(aTitle,anEditorial,aCopyright);
         this.writer = aWriter;
         this.cartoonists = listCartoonists;
+    }
+
+    // constructor sin copyright
+    public Comic(String aTitle, String anEditorial, String aWriter, String[] listCartoonists){
+       this(aTitle,anEditorial, aWriter, listCartoonists, null);
     }
 
     // metodos para recuperar informacion de los campos
