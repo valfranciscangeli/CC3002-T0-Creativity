@@ -15,12 +15,11 @@ public class CreativeWork {
     }
 
     // Metodos para recuperar campos de un CreativeWork
-    public String getTitle(){
-        return this.title;
+    public String getTitle() {
+        return title;
     }
-
     public String getCopyright(){
-        return this.copyright;
+        return copyright;
     }
 
     // Metodo para pasar contenido del CW a un string que lo describa
