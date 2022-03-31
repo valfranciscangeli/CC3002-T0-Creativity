@@ -18,8 +18,12 @@ public class Main {
         System.out.println("trabajo4: "+trabajo4);
         System.out.println("los trabajos 1 y 4 son iguales?:"+ trabajo1.equals(trabajo4));
         //####################################################
-
+        String[] team = {"p1", "p2", "p3"};
+        Comic comic1 = new Comic("Batman", "lala", "DC Comics", team);
+        LiteraryWork work1 = new LiteraryWork("Libro", "Planeta");
         System.out.println("==============================");
+        System.out.println(comic1.hasCopyright());
+        System.out.println(work1);
 
 
     }
