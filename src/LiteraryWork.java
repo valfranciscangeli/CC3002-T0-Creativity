@@ -1,3 +1,10 @@
+/**
+ * Trabajo realizado por Valeria Vallejos Franciscangeli
+ * Tarea 0 - CC3002 Otoño 2022
+ * Clase Trabajo Literario (LiteraryWork), subclase de Trabajo Creativo (CreativeWork)
+ * Por cohesion se trabaja con nombres en inglés
+ */
+
 public class LiteraryWork extends CreativeWork {
     // parametros
     private String publisher;

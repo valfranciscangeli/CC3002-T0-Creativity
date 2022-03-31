@@ -1,4 +1,11 @@
-import java.util.Arrays;
+/**
+ * Trabajo realizado por Valeria Vallejos Franciscangeli
+ * Tarea 0 - CC3002 Otoño 2022
+ * Clase Película (Movie), subclase de Trabajo Creativo (CreativeWork)
+ * Por cohesion se trabaja con nombres en inglés
+ */
+
+import java.util.Arrays;  // se trabajara con arreglos de string
 
 public class Movie extends CreativeWork {
     // parametros

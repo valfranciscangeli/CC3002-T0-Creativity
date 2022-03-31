@@ -1,7 +1,8 @@
 /**
- * Este ejemplo muestra el funcionamiento del constructor y de los
- * metodos equals y toString para comics, deben agregar lo mismo para
- * todas sus clases.
+ * Trabajo realizado por Valeria Vallejos Franciscangeli
+ * Tarea 0 - CC3002 Otoño 2022
+ * Método principal donde se muestran ejemplos de funcionamiento de las clases creadas
+ * Por cohesion se trabaja con nombres en inglés
  */
 
 public class Main {

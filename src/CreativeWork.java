@@ -1,3 +1,10 @@
+/**
+ * Trabajo realizado por Valeria Vallejos Franciscangeli
+ * Tarea 0 - CC3002 Otoño 2022
+ * Clase padre Trabajo Creativo (CreativeWork)
+ * Por cohesion se trabaja con nombres en inglés
+ */
+
 public class CreativeWork {
     //parametros
     private String title;
