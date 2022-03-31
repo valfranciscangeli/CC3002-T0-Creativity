@@ -3,15 +3,15 @@ public class CreativeWork {
     private String title;
     private String copyright = null;
 
+    // Constructor con copyright
+    public CreativeWork(String aTitle, String aCopyright){
+        new CreativeWork(aTitle);
+        this.copyright = aCopyright;
+    }
+
     // Constructor cuando no hay copyright
     public CreativeWork(String aTitle){
         this.title = aTitle;
-    }
-
-    // Constructor con copyright
-    public CreativeWork(String aTitle, String aCopyright){
-        this.title = aTitle;
-        this.copyright = aCopyright;
     }
 
     // Metodos para recuperar campos de un CreativeWork
