@@ -1,6 +1,6 @@
 # Tarea0_CC3002
 
-* Trabajo realizado por Valeria Vallejos Franciscangeli
+* Trabajo realizado por Valeria Franciscangeli
 * Contacto: vvfranciscangeli@gmail.com
 * Proyecto: Tarea 0 - CC3002 Otoño 2022
 * Detalles del proceso de trabajo: https://github.com/valfranciscangeli/Tarea0_CC3002.git
